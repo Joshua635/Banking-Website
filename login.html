@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC LOGIN_PAGE</title>
+    <link rel="icon" type="image" href="./images/HDFC-Bank-emblem.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{
+	margin:0;
+	color:#6a6f8c;
+	background-image: url('./images/pexels-photo-417074.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    
+    
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group .error {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #00368d;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-form h2 {
+        font-size: 24px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+	
+}
+.foot-lnk{
+	text-align:center;
+	color: white;
+}
+
+/* Navbar styles */
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #004274;
+    position: relative;
+    height: 70px;
+
+}
+
+.logo{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #00368d;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+    </style>
+</head>
+<body>
+	<nav>
+        <div class="logo">
+            <h1>HDFC BANK</h1>
+        </div>
+        <ul id="menuList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Register</a></li>
+            <li><a href="login.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required >
+                <small class="error" id="emailError"></small>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <small class="error" id="passwordError"></small>
+            </div>
+            <button id="navigateButton" class="button">Login</button>
+        </form>
+    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a> 
+                        
+                        
+                    </div>
+                </div>
+                <!-- <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+	<script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        }
+        
+    </script>
+
+
+
+    
+    <script>
+
+        //login scipt //
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let valid = true;
+
+        // Clear previous errors
+        emailError.style.display = 'none';
+        passwordError.style.display = 'none';
+
+        // Email validation
+        if (!validateEmail(emailInput.value)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            emailError.style.display = 'block';
+            valid = false;
+        }
+
+        // Password validation
+        if (passwordInput.value.length < 6) {
+            passwordError.textContent = 'Password must be at least 6 characters.';
+            passwordError.style.display = 'block';
+            valid = false;
+        }
+
+        if (valid) {
+            // Submit form if valid
+            alert('Login successful');
+            // loginForm.reset();
+            window.location.href = 'dashboard.html';
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+    const navigateButton = document.getElementById('navigateButton');
+
+    navigateButton.addEventListener('click', function() {
+        
+    });
+});
+    });
+
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(String(email).toLowerCase());
+    }
+});
+
+
+//login button action //
+
+
+
+
+    </script>
+
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+
+
+
+
+    
+</body>
+</html>

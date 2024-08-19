@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement</title>
+    <link rel="icon" type="image" href="./images/HDFC-Bank-emblem.png">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tfoot td {
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media  (max-width:600px) {
+  .container{
+    font-size: 10px;
+    
+  }
+  
+} 
+  
+
+
+
+
+
+
+/* @media (max-width: 480px){
+     .container{
+        justify-items: flex-end;
+        
+        
+    }
+
+    th, td{
+        font-size: 20px;
+    }
+
+    
+} */
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="./images/HDFC-Bank-emblem.png" alt="logo" />
+          <h2>HDFC BANK</h2>
+        </div>
+    
+        <div class="user-account">
+            <div class="user-profile">
+              <!-- <img src="./images/image 2.jfif" alt="Profile Image" /> -->
+              <span class="material-symbols-outlined"> account_circle </span>
+              <div class="user-detail">
+                <h3>Username</h3>
+               
+              </div>
+            </div>
+          </div>
+    
+        <ul class="sidebar-links">
+          <h4>
+            <span>Main Menu</span>
+            <div class="menu-separator"></div>
+          </h4>
+          <li>
+            <a href="index.html">
+              <span class="material-symbols-outlined"> dashboard </span>Home</a>
+          </li>
+          <!-- <li>
+            <a href="deposit.html"><span class="material-symbols-outlined"> overview </span>Deposit</a>
+          </li> -->
+          <li>
+            <a href="bank_statement.html"><span class="material-symbols-outlined"> monitoring </span>Bank Statement</a>
+          </li>
+          <li>
+            <a href="loan.html"><span class="material-symbols-outlined"> monitoring </span>Loan</a>
+          </li>
+          <h4>
+            <span>General</span>
+            <div class="menu-separator"></div>
+          </h4>
+          <li>
+            <a href="#"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
+          </li>
+          <li>
+            <a href="index.html"><span class="material-symbols-outlined"> logout </span>Logout</a>
+          </li>
+          
+            
+        
+      </aside>
+    
+      <header>
+        <!-- <h1>Welcome, User</h1> -->
+        
+        <a href="./index.html" class="button">Logout</a>
+    </header>
+
+    
+    
+    <div class="container">
+        <h1>Bank Statement</h1>
+        <!-- <div class="filter">
+            <label for="filter">Filter by Description:</label>
+            <input type="text" id="filter" onkeyup="filterTable()">
+        </div> -->
+        <table id="statementTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-08-01</td>
+                    <td>Deposit</td>
+                    <td>$1,000.00</td>
+                </tr>
+                <tr>
+                    <td>2024-08-05</td>
+                    <td> Withdrawal</td>
+                    <td>-$200.00</td>
+                </tr>
+                
+                <tr>
+                    <td>2024-08-15</td>
+                    <td>Deposit</td>
+                    <td>$500.00</td>
+                </tr>
+
+                <tr>
+                    <td>2024-08-20</td>
+                    <td> Withdrawal</td>
+                    <td>-$150.00</td>
+                </tr>
+
+                <tr>
+                    <td>2024-08-25</td>
+                    <td>Deposit</td>
+                    <td>$600.00</td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Balance:</td>
+                    <td id="totalBalance">$1,750.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
